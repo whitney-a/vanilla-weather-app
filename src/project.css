@@ -33,7 +33,7 @@ p {
 }
 .container {
   border: 1px solid #c7b198;
-  max-width: 800px;
+  max-width: 900px;
   border-radius: 10px;
   box-shadow: #975a5e;
   padding-left: 20px;
@@ -80,4 +80,10 @@ p {
 }
 .col {
   text-align: center;
+}
+.footer {
+  text-align: center;
+  color: #975a5e;
+  margin-top: 50px;
+  letter-spacing: 2px;
 }
