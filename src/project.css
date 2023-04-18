@@ -30,7 +30,7 @@ p {
   right: 300px;
 }
 .container {
-  border: 1px solid white;
+  border: 1px solid rgb(231, 225, 225);
   max-width: 900px;
   border-radius: 10px;
   box-shadow: white;
@@ -42,8 +42,8 @@ p {
   width: 500px;
   height: 39px;
   margin-right: 10px;
-  border-radius: 10px;
-  border-color: #ffb5b5;
+  border-radius: 5px;
+  border-color: white;
   background-color: white;
 }
 #weather {
@@ -73,11 +73,13 @@ p {
   background-color: blue;
   padding: 5px 30px;
   border-color: blue;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-right: 6px;
 }
 #button:hover {
   color: white;
-  background-color: rgb(34, 34, 134);
+  background-color: #8dc6ff;
+  border-color: #8dc6ff;
   transition: 200ms all ease-in-out;
   box-shadow: 1px 1px 1px;
 }
@@ -95,6 +97,6 @@ p {
   letter-spacing: 2px;
 }
 a {
-  color: #975a5e;
+  color: blue;
   letter-spacing: 2px;
 }
