@@ -1,41 +1,39 @@
 body {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-D20oB1k_Y5sQl1BiDbiBOoro-U5hpEGEWQ&usqp=CAU");
-  background-size: cover;
-  opacity: 0.8;
+  background: rgb(44, 165, 206);
 }
 img {
   border-radius: 50px;
   margin-right: 10px;
 }
 h1 {
-  color: #975a5e;
+  color: white;
   font-size: 25px;
   font-weight: normal;
   margin-bottom: 0;
 }
 h2 {
-  color: #975a5e;
+  color: white;
   font-size: 18px;
   font-weight: normal;
   margin-top: 5px;
   margin-bottom: 0;
 }
 h3 {
-  color: #975a5e;
+  color: white;
   font-size: 19px;
   font-weight: normal;
   margin-top: 2px;
 }
 p {
-  color: #975a5e;
+  color: white;
   position: absolute;
   right: 300px;
 }
 .container {
-  border: 1px solid #c7b198;
+  border: 1px solid white;
   max-width: 900px;
   border-radius: 10px;
-  box-shadow: #975a5e;
+  box-shadow: white;
   padding-left: 20px;
   padding-top: 35px;
   margin-top: 30px;
@@ -46,16 +44,16 @@ p {
   margin-right: 10px;
   border-radius: 10px;
   border-color: #ffb5b5;
-  background-color: #f4e7d5;
+  background-color: white;
 }
 #weather {
   font-size: 25px;
   font-weight: bold;
-  color: #975a5e;
+  color: white;
 }
 #description {
   text-transform: capitalize;
-  color: #975a5e;
+  color: white;
   font-size: 18px;
   font-weight: normal;
   margin-top: 5px;
@@ -67,33 +65,33 @@ p {
 .celsius {
   font-size: 15px;
   margin-top: 0;
-  color: #975a5e;
+  color: white;
   top: -2px;
 }
 #button {
   color: white;
-  background-color: #975a5e;
+  background-color: blue;
   padding: 5px 30px;
-  border-color: #975a5e;
-  border-radius: 15px;
+  border-color: blue;
+  border-radius: 10px;
 }
 #button:hover {
-  color: #975a5e;
-  background-color: #ebcbae;
+  color: white;
+  background-color: rgb(34, 34, 134);
   transition: 200ms all ease-in-out;
   box-shadow: 1px 1px 1px;
 }
 .row {
   margin-top: 30px;
   margin-bottom: 30px;
-  color: #975a5e;
+  color: white;
 }
 .col {
   text-align: center;
 }
 .footer {
   text-align: center;
-  color: #975a5e;
+  color: white;
   letter-spacing: 2px;
 }
 a {
