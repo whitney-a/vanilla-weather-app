@@ -37,20 +37,29 @@ p {
   border-radius: 10px;
   box-shadow: #975a5e;
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 35px;
+  margin-top: 30px;
 }
 #city {
   width: 500px;
-  height: 35px;
-  margin-right: 20px;
+  height: 39px;
+  margin-right: 10px;
   border-radius: 10px;
   border-color: #ffb5b5;
   background-color: #f4e7d5;
 }
-.weather {
+#weather {
   font-size: 25px;
   font-weight: bold;
   color: #975a5e;
+}
+#description {
+  text-transform: capitalize;
+  color: #975a5e;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 .details {
   margin-top: 30px;
@@ -59,6 +68,7 @@ p {
   font-size: 15px;
   margin-top: 0;
   color: #975a5e;
+  top: -2px;
 }
 #button {
   color: white;
@@ -84,6 +94,9 @@ p {
 .footer {
   text-align: center;
   color: #975a5e;
-  margin-top: 50px;
+  letter-spacing: 2px;
+}
+a {
+  color: #975a5e;
   letter-spacing: 2px;
 }
