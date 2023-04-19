@@ -45,7 +45,7 @@ function formatDate(timestamp) {
 
 function displayWeather(response) {
   console.log(response.data);
-  console.log(response.data.time * 1000);
+  console.log(response.data.city);
   let weatherElement = document.querySelector("#weather");
   let humidityElement = document.querySelector("#Humidity");
   let windElement = document.querySelector("#wind");
@@ -57,7 +57,7 @@ function displayWeather(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.condition.description;
-  countryElement.innerHTML = `${city}, ${response.data.country}`;
+  countryElement.innerHTML = response.data.city;
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute(
     "src",
@@ -72,9 +72,12 @@ function search(city) {
 }
 
 function handleSubmit(event) {
+  event.preventDefault();
   let cityElement = document.querySelector("#city");
   search(cityElement.value);
 }
 
-let form = document.querySelector("formControl");
+search("Abuja");
+
+let form = document.querySelector("search-form");
 form.addEventListener("submit", handleSubmit);
