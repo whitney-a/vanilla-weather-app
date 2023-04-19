@@ -53,7 +53,8 @@ function displayWeather(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
   let countryElement = document.querySelector("#country");
-  weatherElement.innerHTML = Math.round(response.data.temperature.current);
+  celsiusTemperature = response.data.temperature.current;
+  weatherElement.innerHTML = Math.round(celsiusTemperature);
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.condition.description;
@@ -75,10 +76,29 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   searchCity(cityInputElement.value);
-  console.log(cityInputElement.value);
+}
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitElement = (9 / 5) * celsiusTemperature + 32;
+  let celsiusElement = document.querySelector("#weather");
+  celsiusElement.innerHTML = Math.round(fahrenheitElement);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let celsius = celsiusTemperature;
+  let celsiusDegree = document.querySelector("#weather");
+  celsiusDegree.innerHTML = Math.round(celsiusTemperature);
 }
 
 searchCity("Abuja");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#degree");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#number");
+celsiusLink.addEventListener("click", displayCelsius);
