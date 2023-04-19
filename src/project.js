@@ -65,7 +65,7 @@ function displayWeather(response) {
   );
 }
 
-function search(city) {
+function searchCity(city) {
   let apiKey = `f8o9e9ae7af783f9513a465db0bta63f`;
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
@@ -73,11 +73,12 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityElement = document.querySelector("#city");
-  search(cityElement.value);
+  let cityInputElement = document.querySelector("#city-input");
+  searchCity(cityInputElement.value);
+  console.log(cityInputElement.value);
 }
 
-search("Abuja");
+searchCity("Abuja");
 
-let form = document.querySelector("search-form");
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);

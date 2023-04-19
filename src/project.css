@@ -39,7 +39,7 @@ p {
   padding-top: 35px;
   margin-top: 30px;
 }
-#city {
+#city-input {
   width: 500px;
   height: 39px;
   margin-right: 0px;
@@ -70,6 +70,14 @@ p {
   top: -2px;
 }
 #button {
+  color: white;
+  background-color: blue;
+  padding: 5px 30px;
+  border-color: blue;
+  border-radius: 5px;
+  margin-right: 6px;
+}
+#current-button {
   color: white;
   background-color: blue;
   padding: 5px 30px;
