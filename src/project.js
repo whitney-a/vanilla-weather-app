@@ -65,8 +65,16 @@ function displayWeather(response) {
   );
 }
 
-let city = "Toronto";
-let apiKey = `f8o9e9ae7af783f9513a465db0bta63f`;
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = `f8o9e9ae7af783f9513a465db0bta63f`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
 
-axios.get(apiUrl).then(displayWeather);
+function handleSubmit(event) {
+  let cityElement = document.querySelector("#city");
+  search(cityElement.value);
+}
+
+let form = document.querySelector("formControl");
+form.addEventListener("submit", handleSubmit);

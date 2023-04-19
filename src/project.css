@@ -34,7 +34,7 @@ p {
   border: 1px solid rgb(231, 225, 225);
   max-width: 900px;
   border-radius: 10px;
-  box-shadow: white;
+  box-shadow: 3px 3px 3px 2px #0092ca;
   padding-left: 20px;
   padding-top: 35px;
   margin-top: 30px;
@@ -78,9 +78,10 @@ p {
   margin-right: 6px;
 }
 #button:hover {
-  color: white;
-  background-color: #8dc6ff;
-  border-color: #8dc6ff;
+  color: black;
+  background-color: blue;
+  opacity: 0.8;
+  border-color: blue;
   transition: 200ms all ease-in-out;
   box-shadow: 1px 1px 1px;
 }
