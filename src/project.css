@@ -111,3 +111,16 @@ a {
   letter-spacing: 2px;
   text-decoration: none;
 }
+.weekday {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.week {
+  margin-left: 0;
+}
+.forecast {
+  font-weight: bold;
+}
+.min {
+  font-weight: 100px;
+}
