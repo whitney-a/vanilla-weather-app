@@ -43,9 +43,55 @@ function formatDate(timestamp) {
   return `${day}, ${dates} ${month}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if(index < 6) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+            <div class="week">${formatDay(forecastDay.time)}</div>
+            <div class="weekday">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                  forecastDay.condition.icon
+                }.png"
+                alt="rainy weather"
+                width="42px"
+              />
+            </div>
+            <span class="forecast">${Math.round(
+              forecastDay.temperature.maximum
+            )}°</span><span class="min">${Math.round(
+        forecastDay.temperature.minimum
+      )}°</span>
+          </div>`;
+            }
+  });
+
+  forcastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = `f8o9e9ae7af783f9513a465db0bta63f`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
-  console.log(response.data);
-  console.log(response.data.city);
   let weatherElement = document.querySelector("#weather");
   let humidityElement = document.querySelector("#Humidity");
   let windElement = document.querySelector("#wind");
@@ -64,6 +110,8 @@ function displayWeather(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+
+  getForecast(response.data.coordinates);
 }
 
 function searchCity(city) {

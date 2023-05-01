@@ -97,6 +97,9 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
   color: white;
+  padding-left: 10px;
+  align-items: center;
+  padding-right: 0;
 }
 .col {
   text-align: center;
@@ -117,6 +120,7 @@ a {
 }
 .week {
   margin-left: 0;
+  padding-left: 5px;
 }
 .forecast {
   font-weight: bold;
